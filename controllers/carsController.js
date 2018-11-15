@@ -1,6 +1,6 @@
-const Cars = require('../models/Cars')
+const Car = require('../models/Car')
 
-const carsControllers = {
+const carControllers = {
     index: (req, res) => {
         User.findById(userId).populate('cars')
         .then((user) => {
