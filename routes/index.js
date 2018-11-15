@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const carsController = require('../controllers/carsController')
-const driversController = require('../controllers/driversController')
+const carsController = require('../controllers/carController')
+const driversController = require('../controllers/driverController')
 
 router.get('/api/cars', carsController.index)
 router.post('/api/cars/', carsController.create)
