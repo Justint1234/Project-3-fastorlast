@@ -4,7 +4,7 @@ class CarPage extends Component {
     render() {
         return (
             <div>
-                
+                <h1>Choose The Car</h1>
             </div>
         );
     }
