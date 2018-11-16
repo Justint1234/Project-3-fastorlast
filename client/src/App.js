@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom'
 import CarPage from './components/CarPage'
 import HomePage from './components/HomePage'
 import DriverPage from './components/DriverPage'
-import NavBar from './components/NavBar'
+import NavBar from './components/Navbar'
 
 
 class App extends Component {

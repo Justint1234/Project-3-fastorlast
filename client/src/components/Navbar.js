@@ -4,13 +4,13 @@ import styled from 'styled-components'
 
 const NavBarStyles = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  background: #457B9D;
+  background: red;
   height: 50px;
   
   a {
-    text-decoration: none;
+    text-decoration: underline;
     padding-left: 10px;
     color: white;
     &:active {
@@ -28,11 +28,11 @@ const NavBarStyles = styled.div`
 class NavBar extends Component {
   render() {
     return (
-      <NavBarStyles>
-        <Link to="/">My Recipes</Link>
-        {/* <div className="right">
-          <Link to="/login">Sign Up</Link>
-        </div> */}
+      <NavBarStyles id="nav-container" class="some-class">
+        <Link to="/carpage">Car Page</Link>
+        <div className="right">
+          <Link to="/driverpage">Drivers</Link>
+        </div>
         
       </NavBarStyles>
     );
