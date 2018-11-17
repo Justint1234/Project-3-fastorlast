@@ -7,7 +7,8 @@ const bugatti = new Car({
     Colors: 'Blue',
     Type: 'Exotic',
     Year: 2014,
-    Model: 'Hennesy Venom GT'
+    Model: 'Hennesy Venom GT',
+    image: ('https://i.kinja-img.com/gawker-media/image/upload/s--4TtkOtA9--/c_fill,f_auto,fl_progressive,g_north,h_264,q_80,w_470/v5ylaijufkvhr6kh45db.jpg')
 })
 
 const lamborghini = new Car({
@@ -15,7 +16,8 @@ const lamborghini = new Car({
     Color: 'Orange',
     Type: 'Luxury',
     Year: 2018,
-    Model: 'Huracan'
+    Model: 'Huracan',
+    image: ('https://images-na.ssl-images-amazon.com/images/I/818j6IqXq%2BL._SX425_.jpg')
 })
 
 const astonMartin = new Car({
@@ -23,7 +25,8 @@ const astonMartin = new Car({
     Color: 'Black',
     Type: 'Luxury',
     Year: 2019,
-    Model: 'DB11'
+    Model: 'DB11', 
+    image: ('https://dmi3w0goirzgw.cloudfront.net/gallery-images/original/260000/400/260453.jpg')
 }) 
 
 const bentley = new Car({
@@ -31,7 +34,8 @@ const bentley = new Car({
     Color: 'Red',
     Type: 'Exotic',
     Year: 2017,
-    Model: 'Continental GT' 
+    Model: 'Continental GT',
+    image: ('https://image.pbs.org/video-assets/pbs/motor-week/53185/images/Mezzanine_781.jpg.fit.980x551.jpg')
 }) 
 
 const ferrari = new Car({
@@ -39,7 +43,8 @@ const ferrari = new Car({
     Color: 'Purple',
     Type: 'Luxury',
     Year: 2018,
-    Model: '488 GTB'
+    Model: '488 GTB',
+    image: ('https://i.pinimg.com/originals/29/48/f1/2948f17d979494f2c0e6597f914be6a4.jpg')
 })
 
 const koenigsegg = new Car({
@@ -47,7 +52,8 @@ const koenigsegg = new Car({
     Color: 'Gray',
     Type: 'Exotic',
     Year: 2017,
-    Model: 'Agera RS'
+    Model: 'Agera RS',
+    image: ('https://stmed.net/sites/default/files/koenigsegg-ccx-wallpapers-32284-9530017.jpg')
 })
 
 const justin = new Driver({

@@ -9,6 +9,8 @@ import styled from 'styled-components'
 const AppStyles = styled.div`
 display: flex;
 justify-content: center;
+background-image: url('https://www.colourbox.com/preview/17759483-racing-background.jpg') 
+text: white;
 }
 `
 
@@ -25,7 +27,7 @@ class App extends Component {
             <Route exact path='/driverpage' component={DriverPage} />
           </Switch>
           <AppStyles id='app-container' class='some-class'>
-            <h1>Welcome Racers</h1>
+            
           </AppStyles>
 
         </div>
