@@ -24,7 +24,7 @@ class App extends Component {
           <Switch>
             <Route exact path='/carpage' component={CarPage} />
             <Route exact path='/' component={HomePage} />
-            <Route exact path='/driverpage' component={DriverPage} />
+            <Route exact path='/DriverPage' component={DriverPage} />
           </Switch>
           <AppStyles id='app-container' class='some-class'>
             
