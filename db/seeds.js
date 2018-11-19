@@ -74,7 +74,7 @@ const mark = new Driver({
     Name: 'Mark',
     Wins: 56,
     Losses: 13,
-    Experience: 'This driver has been racing for 3 years. Car of choice is the Bentley Continental GT. Can be a potential threat.  ',
+    Experience: 'This driver has been racing for 8 years. Car of choice is the Bentley Continental GT. Can be a potential threat.  ',
     Location: 'Las Vegas, Nevada'
 })
 
@@ -90,7 +90,7 @@ const dom = new Driver({
     Name: 'Dom',
     Wins: 98,
     Losses: 2,
-    Experience: 'A threat to record',
+    Experience: '2nd best driver on this list, this driver is really hard to beat it will take a veteran to beat him he is almost unbeatable. A challenge for only the greatest of drivers. This driver has also been racing for 17 years.',
     Location: 'Houston, Texas'
 })
 
@@ -98,7 +98,7 @@ const bob = new Driver({
     Name: 'Bob',
     Wins: 5,
     Losses: 78,
-    Experience: 'pure trash, just terrible',
+    Experience: 'Without a doubt the worst driver on this list. This racer is for beginners and can be beaten easily. He is pure trash. Has been racing for 9 years.',
     Location: 'Rome, Italy'
 })
 
@@ -106,7 +106,7 @@ const johnny = new Driver({
     Name: 'Johnny', 
     Wins: 50,
     Losses: 50,
-    Experience: 'just average',
+    Experience: 'An average racer not really much of a challenge, unpredictable and is more suited towards beginners or intermediate racers. Has been racing for 10 years.',
     Location: 'Moscow, Russia'
 })
 
