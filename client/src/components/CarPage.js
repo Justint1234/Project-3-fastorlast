@@ -19,7 +19,6 @@ class CarPage extends Component {
             this.setState({
                 car: res.data
             })
-
         })
     }
     render() {
@@ -27,7 +26,14 @@ class CarPage extends Component {
             <div>
                 <h1>Choose The Car</h1>
                 {this.state.car.map((car) => (
-                    <div>{car.Model}</div>
+                    <div>
+                        <div>Make: {car.Make}</div>
+                        <div>Model: {car.Model}</div>
+                        <div>Year: {car.Year}</div>
+                        <div>Type: {car.Type}</div>
+                        <div>Color: {car.Color}</div>
+                        <div>Horsepower: {car.Horsepower}</div>
+                    </div>
                 ))}
             </div>
         );

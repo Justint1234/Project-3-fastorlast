@@ -3,8 +3,8 @@ Schema = mongoose.Schema
 
 const Car = new Schema({
     Horsepower: Number,
-    Nitro: String,
-    Colors: String,
+    Make: String,
+    Color: String,
     Type: String,
     Year: Number,
     Model: String,

@@ -8,6 +8,7 @@ const bugatti = new Car({
     Type: 'Exotic',
     Year: 2014,
     Model: 'Hennesy Venom GT',
+    Make: 'Bugatti',
     image: ('https://i.kinja-img.com/gawker-media/image/upload/s--4TtkOtA9--/c_fill,f_auto,fl_progressive,g_north,h_264,q_80,w_470/v5ylaijufkvhr6kh45db.jpg')
 })
 
@@ -17,6 +18,7 @@ const lamborghini = new Car({
     Type: 'Luxury',
     Year: 2018,
     Model: 'Huracan',
+    Make: 'Lamborghini',
     image: ('https://images-na.ssl-images-amazon.com/images/I/818j6IqXq%2BL._SX425_.jpg')
 })
 
@@ -25,7 +27,8 @@ const astonMartin = new Car({
     Color: 'Black',
     Type: 'Luxury',
     Year: 2019,
-    Model: 'DB11', 
+    Model: 'DB11',
+    Make: 'Aston Martin', 
     image: ('https://dmi3w0goirzgw.cloudfront.net/gallery-images/original/260000/400/260453.jpg')
 }) 
 
@@ -35,6 +38,7 @@ const bentley = new Car({
     Type: 'Exotic',
     Year: 2017,
     Model: 'Continental GT',
+    Make: 'Bentley',
     image: ('https://image.pbs.org/video-assets/pbs/motor-week/53185/images/Mezzanine_781.jpg.fit.980x551.jpg')
 }) 
 
@@ -44,6 +48,7 @@ const ferrari = new Car({
     Type: 'Luxury',
     Year: 2018,
     Model: '488 GTB',
+    Make: 'Ferrari',
     image: ('https://i.pinimg.com/originals/29/48/f1/2948f17d979494f2c0e6597f914be6a4.jpg')
 })
 
@@ -53,46 +58,60 @@ const koenigsegg = new Car({
     Type: 'Exotic',
     Year: 2017,
     Model: 'Agera RS',
+    Make: 'Koenigsegg',
     image: ('https://stmed.net/sites/default/files/koenigsegg-ccx-wallpapers-32284-9530017.jpg')
 })
 
 const justin = new Driver({
-  wins: 100,
-  losses: 0,
-  experience: 'undefeated',  
+    Name: 'Justin',
+  Wins: 100,
+  Losses: 0,
+  Experience: 'undefeated',
+  Location: 'Tokyo Japan'  
 })
 
 const mark = new Driver({
-    wins: 56,
-    losses: 13,
-    experience: 'pretty good'
+    Name: 'Mark',
+    Wins: 56,
+    Losses: 13,
+    Experience: 'pretty good',
+    Location: 'Las Vegas, Nevada'
 })
 
 const paul = new Driver({
-    wins: 97,
-    losses: 3,
-    experience: 'almost as good as me'
+    Name: 'Paul',
+    Wins: 97,
+    Losses: 3,
+    Experience: 'almost as good as me',
+    Location: 'Los Angeles, California'
 })
 
 const dom = new Driver({
-    wins: 98,
-    losses: 2,
-    experience: 'A threat to record'
+    Name: 'Dom',
+    Wins: 98,
+    Losses: 2,
+    Experience: 'A threat to record',
+    Location: 'Houston, Texas'
 })
 
 const bob = new Driver({
-    wins: 5,
-    losses: 78,
-    experience: 'pure trash, just terrible'
+    Name: 'Bob',
+    Wins: 5,
+    Losses: 78,
+    Experience: 'pure trash, just terrible',
+    Location: 'Rome, Italy'
 })
 
 const johnny = new Driver({
-    wins: 50,
-    losses: 50,
-    experience: 'just average'
+    Name: 'Johnny', 
+    Wins: 50,
+    Losses: 50,
+    Experience: 'just average',
+    Location: 'Moscow, Russia'
 })
 
 Driver.remove({})
+.then(() => Car.remove({}))
 .then(() => Car.insertMany([bugatti, lamborghini, astonMartin, ferrari, bentley, koenigsegg]))
 .then(() => justin.save())
 .then(() => bob.save())
