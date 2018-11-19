@@ -4,7 +4,7 @@ const mongoose = require('./connections')
 
 const bugatti = new Car({
     Horsepower: 600,
-    Colors: 'Blue',
+    Color: 'Blue',
     Type: 'Exotic',
     Year: 2014,
     Model: 'Hennesy Venom GT',
@@ -66,7 +66,7 @@ const justin = new Driver({
     Name: 'Justin',
   Wins: 100,
   Losses: 0,
-  Experience: 'undefeated',
+  Experience: 'Undefeated. The greatest racer on this list. His car choice is the Koenigsegg Agera RS. This driver has been racing for 12 years',
   Location: 'Tokyo Japan'  
 })
 
@@ -74,7 +74,7 @@ const mark = new Driver({
     Name: 'Mark',
     Wins: 56,
     Losses: 13,
-    Experience: 'pretty good',
+    Experience: 'This driver has been racing for 3 years. Car of choice is the Bentley Continental GT. Can be a potential threat.  ',
     Location: 'Las Vegas, Nevada'
 })
 
@@ -82,7 +82,7 @@ const paul = new Driver({
     Name: 'Paul',
     Wins: 97,
     Losses: 3,
-    Experience: 'almost as good as me',
+    Experience: 'This driver is the 3rd best racer on this list. Very much a threat and difficult to beat. Has been racing for 17 years',
     Location: 'Los Angeles, California'
 })
 
