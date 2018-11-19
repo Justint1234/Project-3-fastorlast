@@ -4,7 +4,10 @@ import styled from 'styled-components'
 const DriverWrapper = styled.div`
 display: flex;
 justify-content: center;
+font-size: 30px;
 `
+
+
 
 class DriverPage extends Component {
     render() {

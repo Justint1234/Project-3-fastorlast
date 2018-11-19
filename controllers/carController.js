@@ -2,45 +2,40 @@ const Car = require('../models/Car')
 
 const carsControllers = {
     index: (req, res) => {
-        User.findById(userId).populate('cars')
-            .then((user) => {
-                res.send(user.cars)
-            })
+        Car.find({})
+        .then((cars) => {
+            console.log(cars)
+            res.send(cars)
+        })
     },
     show: (req, res) => {
         let carId = req.params.carId
-        Car.findById(carId)
-            .then((car) => {
-                res.send(car)
-            })
+        Car.find(car) 
+        .then((car) => {
+            res.send(car)
+        })
     },
     delete: (req, res) => {
         let carId = req.params.carId
         Car.findByIdAndDelete(carId)
-            .then(() => {
-                res.send(200)
-            })
+        .then(() => {
+            res.send(200)
+        })
     },
     update: (req, res) => {
-        let carId = req.params.carId
-        Car.findByAndUpdate(CarId, req.body, { new: true })
-            .then((updatedCar) => {
-                updatedCar.save()
-                res.send(updatedCar)
-            })
+        let carId  = req.params.carId
+        Car.findByIdAndUpdate(carId, req.body, {new: true})
+        .then((updatedCar) => {
+            updatedCar.save()
+            res.send(updatedCar)
+        })
     },
     create: (req, res) => {
-        let userId = req.params.userId
-        User.findById(userId)
-            .then((user) => {
-                console.log(user)
-                Car.create(req.body)
-                    .then((newCar) => {
-                        console.log(newCar)
-                        user.cars.push(newCar)
-                        user.save()
-                        res.send(newCar)
-                    })
+            Car.create(req.body)
+            .then((newCar) => {
+                console.log(newCar)
+                res.send(newCar)
+                res.redirect(`/api/car`)
             })
     }
 }
