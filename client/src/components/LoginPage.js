@@ -47,7 +47,7 @@ class LogInPage extends Component {
         <h1>Register To See Your Competition</h1>
         { this.state.users.map((user) => (
           <div key={user._id}>
-            <Link to={`/users/${user._id}`}>{user.username}</Link>
+            <Link to={`/carpage`}>{user.username}</Link>
           </div>
         )) }
 
@@ -62,6 +62,7 @@ class LogInPage extends Component {
             <input onChange={this.handleChange} value={this.state.newUser.password} type="password" name="password"/>
           </div>
           <button type="submit">Create Racer</button>
+          <button type="delete">Delete Racer</button>
         </form>
       </div>
     );

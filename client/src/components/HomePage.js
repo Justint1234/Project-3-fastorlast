@@ -8,7 +8,10 @@ class HomePage extends Component {
     render() {
         return (
             <div>
-                 <h1>Welcome Racers</h1>
+                <h1>Welcome Racers</h1>
+                <form action="http://localhost:3000/login">
+                    <input type="submit" value="Log In Racer" />
+                </form>
             </div>
         );
     }
