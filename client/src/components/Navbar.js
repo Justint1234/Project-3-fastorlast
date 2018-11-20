@@ -31,7 +31,7 @@ class NavBar extends Component {
       <NavBarStyles id="nav-container" class="some-class">
         <Link to="/carpage">Car Page</Link>
         <div className="right">
-          <Link to="/driverpage">Drivers</Link>
+          <Link to="/driverpage">Driver Page</Link>
           <Link to="/login">Log-In</Link>
         </div>
         
