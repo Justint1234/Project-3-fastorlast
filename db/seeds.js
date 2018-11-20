@@ -66,7 +66,7 @@ const justin = new Driver({
     Name: 'Justin',
   Wins: 100,
   Losses: 0,
-  Experience: 'Undefeated. The greatest racer on this list. His car choice is the Koenigsegg Agera RS. This driver has been racing for 12 years',
+  Experience: 'Undefeated. The greatest racer on this list. His most driven car is the Koenigsegg Agera RS. This driver has been racing for 12 years',
   Location: 'Tokyo Japan'  
 })
 
@@ -74,7 +74,7 @@ const mark = new Driver({
     Name: 'Mark',
     Wins: 56,
     Losses: 13,
-    Experience: 'This driver has been racing for 8 years. Car of choice is the Bentley Continental GT. Can be a potential threat.  ',
+    Experience: 'This driver has been racing for 8 years. Car of choice is the Bentley Continental GT. Can be a potential threat. The Lamborghini Huracan is his most driven car. ',
     Location: 'Las Vegas, Nevada'
 })
 
@@ -82,7 +82,7 @@ const paul = new Driver({
     Name: 'Paul',
     Wins: 97,
     Losses: 3,
-    Experience: 'This driver is the 3rd best racer on this list. Very much a threat and difficult to beat. Has been racing for 17 years',
+    Experience: 'This driver is the 3rd best racer on this list. Very much a threat and difficult to beat. Has been racing for 17 years and his most driven car is the Aston Martin DB11.',
     Location: 'Los Angeles, California'
 })
 
@@ -90,7 +90,7 @@ const dom = new Driver({
     Name: 'Dom',
     Wins: 98,
     Losses: 2,
-    Experience: '2nd best driver on the list, this veteran has beaten some of the best drivers on the road with his impressive skills. With an almost perfect record he has rightfully claimed the spot of number 2 on the list. This racer has also been racing for 17 years',
+    Experience: '2nd best driver on the list, this veteran has beaten some of the best drivers on the road with his impressive skills. With an almost perfect record he has rightfully claimed the spot of number 2 on the list. This racer has also been racing for 17 years and his car of choice is the Ferrari 488 GTB.',
     Location: 'Houston, Texas'
 })
 
@@ -98,7 +98,7 @@ const bob = new Driver({
     Name: 'Bob',
     Wins: 5,
     Losses: 78,
-    Experience: 'Without a doubt the worst driver on this list. This racer is for beginners and can be beaten easily. He is pure trash. Has been racing for 9 years.',
+    Experience: 'Without a doubt the worst driver on this list. This racer is for beginners and can be beaten easily. He is pure trash. Has been racing for 9 years. His car of choice is the Bugatti Hennesy Venom GT',
     Location: 'Rome, Italy'
 })
 
@@ -106,7 +106,7 @@ const johnny = new Driver({
     Name: 'Johnny', 
     Wins: 50,
     Losses: 50,
-    Experience: 'A racer with an average record, not really difficult to beat and has 11 years of racing under his belt. ',
+    Experience: 'A racer with an average record, not really difficult to beat and has 11 years of racing under his belt. His car of choice is the Bentley Continental GT. ',
     Location: 'Moscow, Russia'
 })
 
