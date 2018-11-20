@@ -26,6 +26,7 @@ class LogInPage extends Component {
     axios.post('/api/users', this.state.newUser).then(res => {
       console.log(res.data)
       this.props.history.push(`/users/${res.data._id}`)
+        this.props.history.push(`/carpage`)
     })
     
   }
