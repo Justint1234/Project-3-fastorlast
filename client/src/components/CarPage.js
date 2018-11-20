@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 // import styled from 'styled-components'
 import axios from 'axios'
+import styled from 'styled-components'
+const DriverContainerStyle = styled.div`
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+align-content: flex-start;
 
 
+`
 
 class CarPage extends Component {
     state = {
@@ -24,6 +31,7 @@ class CarPage extends Component {
     render() {
         return (
             <div>
+                 <DriverContainerStyle>
                 <h1>Choose The Car</h1>
                 {this.state.car.map((car) => (
                     <div>
@@ -35,6 +43,7 @@ class CarPage extends Component {
                         <div>Horsepower: {car.Horsepower}</div>
                     </div>
                 ))}
+                </DriverContainerStyle>
             </div>
         );
     }
