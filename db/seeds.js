@@ -90,7 +90,7 @@ const dom = new Driver({
     Name: 'Dom',
     Wins: 98,
     Losses: 2,
-    Experience: '2nd best driver on this list, this driver is really hard to beat it will take a veteran to beat him he is almost unbeatable. A challenge for only the greatest of drivers. This driver has also been racing for 17 years.',
+    Experience: '2nd best driver on the list, this veteran has beaten some of the best drivers on the road with his impressive skills. With an almost perfect record he has rightfully claimed the spot of number 2 on the list. This racer has also been racing for 17 years',
     Location: 'Houston, Texas'
 })
 
@@ -106,7 +106,7 @@ const johnny = new Driver({
     Name: 'Johnny', 
     Wins: 50,
     Losses: 50,
-    Experience: 'An average racer not really much of a challenge, unpredictable and is more suited towards beginners or intermediate racers. Has been racing for 10 years.',
+    Experience: 'A racer with an average record, not really difficult to beat and has 11 years of racing under his belt. ',
     Location: 'Moscow, Russia'
 })
 
