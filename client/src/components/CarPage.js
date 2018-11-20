@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import styled from 'styled-components'
 const DriverContainerStyle = styled.div`
-
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 `
 
 class CarPage extends Component {
@@ -26,20 +28,19 @@ class CarPage extends Component {
     render() {
         return (
             <div>
-                 <DriverContainerStyle>
                 <h1>Choose The Car</h1>
-                {this.state.car.map((car) => (
-                    <div>
-                        <div>Make: {car.Make}</div>
-                        <div>Model: {car.Model}</div>
-                        <div>Year: {car.Year}</div>
-                        <div>Type: {car.Type}</div>
-                        <div>Color: {car.Color}</div>
-                        <div>Horsepower: {car.Horsepower}</div>
-                        <button onClick={this.handleDelete}>X</button>
-                        
-                    </div>
-                ))}
+                <DriverContainerStyle>
+                    {this.state.car.map((car) => (
+                        <div>
+                            <div>Make: {car.Make}</div>
+                            <div>Model: {car.Model}</div>
+                            <div>Year: {car.Year}</div>
+                            <div>Type: {car.Type}</div>
+                            <div>Color: {car.Color}</div>
+                            <div>Horsepower: {car.Horsepower}</div>
+                            <div>Image: {car.image}</div>
+                        </div>
+                    ))}
                 </DriverContainerStyle>
             </div>
         );

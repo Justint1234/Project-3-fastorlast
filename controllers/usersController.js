@@ -8,7 +8,7 @@ const usersController = {
             })
     },
     show: (req, res) => {
-        User.findById(req.params.userId).populate('drivers')
+        User.findById(req.params.userId).populate('users')
         .then((users) => {
             res.send(users)
         })
@@ -21,7 +21,7 @@ const usersController = {
         })
     },
     delete: (req, res) => {
-        Users.findByIdAndDelete(req.params.UsersId)
+        Users.findByIdAndDelete(req.params.usersId)
         .then(() => {
             res.send(200)
         })

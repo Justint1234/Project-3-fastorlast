@@ -28,38 +28,85 @@ class LogInPage extends Component {
       this.props.history.push(`/users/${res.data._id}`)
         this.props.history.push(`/carpage`)
     })
-    
+
   }
 
   getAllUsers = () => {
     axios.get('/api/users').then((res) => {
-      this.setState({users: res.data})
+      this.setState({ users: res.data })
     })
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.getAllUsers()
+  }
+
+  delete(userId) {
+    axios.delete(`/api/users/${userId}`)
+      .then((data) => {
+        this.getAllUsers()
+      })
   }
 
   render() {
     return (
       <div>
         <h1>Register To See Your Competition</h1>
-        { this.state.users.map((user) => (
+        <form onSubmit={this.handleUpdate}>
+                <div>
+                  <label htmlFor="Model">Model: </label>
+                  <input
+                    type="text"
+                    onChange={this.handleChange}
+                    value={this.state.car.Model}
+                    name="Model"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="Make">Make: </label>
+                  <input
+                    onChange={this.handleChange}
+                    value={this.state.car.Make}
+                    type="text"
+                    name="name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="Type">Type: </label>
+                  <input
+                    type="text"
+                    name="email"
+                    value={this.state.car.Type}
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <div>
+                  <label htmlFor="Color">Color: </label>
+                  <input
+                    onChange={this.handleChange}
+                    value={this.state.car.Color}
+                    type="text"
+                    name="info"
+                  />
+                </div>
+                <button type="submit">Save Car</button>
+              </form>
+        {this.state.users.map((user) => (
           <div key={user._id}>
             <Link to={`/carpage`}>{user.username}</Link>
+            <button onClick={() => this.delete(user._id)}>Xd</button>
           </div>
-        )) }
+        ))}
 
         <h3>Sign-up</h3>
         <form onSubmit={this.handleSubmit}>
           <div>
             <label htmlFor="username">User Name: </label>
-            <input onChange={this.handleChange} value={this.state.newUser.username} type="text" name="username"/>
+            <input onChange={this.handleChange} value={this.state.newUser.username} type="text" name="username" />
           </div>
           <div>
             <label htmlFor="password">Password: </label>
-            <input onChange={this.handleChange} value={this.state.newUser.password} type="password" name="password"/>
+            <input onChange={this.handleChange} value={this.state.newUser.password} type="password" name="password" />
           </div>
           <button type="submit">Create Racer</button>
           <button type="delete">Delete Racer</button>
