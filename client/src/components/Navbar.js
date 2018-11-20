@@ -32,6 +32,7 @@ class NavBar extends Component {
         <Link to="/carpage">Car Page</Link>
         <div className="right">
           <Link to="/driverpage">Drivers</Link>
+          <Link to="/login">Log-In</Link>
         </div>
         
       </NavBarStyles>

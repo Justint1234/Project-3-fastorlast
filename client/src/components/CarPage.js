@@ -37,11 +37,7 @@ class CarPage extends Component {
                         <div>Color: {car.Color}</div>
                         <div>Horsepower: {car.Horsepower}</div>
                         <button onClick={this.handleDelete}>X</button>
-                        <input onBlur={this.handleUpdate}
-          onChange={this.handleChange}
-          type="text" name="title"
-          value={this.state.title}
-        />
+                        
                     </div>
                 ))}
                 </DriverContainerStyle>
