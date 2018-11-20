@@ -43,15 +43,14 @@ class LogInPage extends Component {
   render() {
     return (
       <div>
-        <h1>Log-In To See Your Ideas</h1>
-        <h3>All Users: </h3>
+        <h1>Register To See Your Competition</h1>
         { this.state.users.map((user) => (
           <div key={user._id}>
             <Link to={`/users/${user._id}`}>{user.username}</Link>
           </div>
         )) }
 
-        <h3>Sign-Up</h3>
+        <h3>Sign-up</h3>
         <form onSubmit={this.handleSubmit}>
           <div>
             <label htmlFor="username">User Name: </label>
@@ -61,7 +60,7 @@ class LogInPage extends Component {
             <label htmlFor="password">Password: </label>
             <input onChange={this.handleChange} value={this.state.newUser.password} type="password" name="password"/>
           </div>
-          <button type="submit">Create User</button>
+          <button type="submit">Create Racer</button>
         </form>
       </div>
     );
