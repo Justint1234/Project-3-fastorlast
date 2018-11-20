@@ -3,11 +3,6 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import styled from 'styled-components'
 const DriverContainerStyle = styled.div`
-display: flex;
-justify-content: space-around;
-flex-wrap: wrap;
-align-content: flex-start;
-
 
 `
 
@@ -41,6 +36,12 @@ class CarPage extends Component {
                         <div>Type: {car.Type}</div>
                         <div>Color: {car.Color}</div>
                         <div>Horsepower: {car.Horsepower}</div>
+                        <button onClick={this.handleDelete}>X</button>
+                        <input onBlur={this.handleUpdate}
+          onChange={this.handleChange}
+          type="text" name="title"
+          value={this.state.title}
+        />
                     </div>
                 ))}
                 </DriverContainerStyle>
