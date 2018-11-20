@@ -28,7 +28,7 @@ const NavBarStyles = styled.div`
 class NavBar extends Component {
   render() {
     return (
-      <NavBarStyles id="nav-container" class="some-class">
+      <NavBarStyles id="nav-container" className="some-class">
         <Link to="/carpage">Car Page</Link>
         <div className="right">
           <Link to="/driverpage">Driver Page</Link>
