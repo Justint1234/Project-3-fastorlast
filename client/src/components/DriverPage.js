@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import styled from 'styled-components'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 class DriverPage extends Component {
     state = {
@@ -24,7 +25,7 @@ class DriverPage extends Component {
                 <h1>Choose your opponent</h1>
                 {this.state.driver.map((driver) => (
                     <div>
-                        <div>Name: {driver.Name}</div>
+                        <Link to={`/drivers/${driver._id}`}><div>Name: {driver.Name}</div></Link>
                         <div>Wins: {driver.Wins}</div>
                         <div>Losses: {driver.Losses}</div>
                         <div>Experience: {driver.Experience}</div>

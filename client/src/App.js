@@ -6,6 +6,7 @@ import DriverPage from './components/DriverPage'
 import NavBar from './components/Navbar'
 import styled from 'styled-components'
 import LoginPage from './components/LoginPage'
+import SingleDriver from './components/SingleDriver';
 
 const AppStyles = styled.div`
 display: flex;
@@ -27,6 +28,7 @@ class App extends Component {
             <Route exact path='/carpage' component={CarPage} />
             <Route exact path='/' component={HomePage} />
             <Route exact path='/DriverPage' component={DriverPage} />
+            <Route exact path='/drivers/:driverId' component={SingleDriver} />
           </Switch>
           <AppStyles id='app-container' className='some-class'>
             

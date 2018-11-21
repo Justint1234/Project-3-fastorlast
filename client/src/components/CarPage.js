@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import styled from 'styled-components'
 import axios from 'axios'
 import styled from 'styled-components'
 const DriverContainerStyle = styled.div`
@@ -38,7 +37,7 @@ class CarPage extends Component {
                             <div>Type: {car.Type}</div>
                             <div>Color: {car.Color}</div>
                             <div>Horsepower: {car.Horsepower}</div>
-                            <div>Image: {car.image}</div>
+                            <img src={car.Image} alt="sdfg" />
                         </div>
                     ))}
                 </DriverContainerStyle>

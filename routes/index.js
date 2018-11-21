@@ -4,6 +4,7 @@ const carController = require('../controllers/carController')
 const driverController = require('../controllers/driverController')
 const usersController = require('../controllers/usersController')
 
+
 router.get('/api/car', carController.index)
 router.post('/api/car/', carController.create)
 router.get('/api/car/:carId', carController.show)

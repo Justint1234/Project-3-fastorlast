@@ -19,7 +19,7 @@ const lamborghini = new Car({
     Year: 2018,
     Model: 'Huracan',
     Make: 'Lamborghini',
-    image: ('https://images-na.ssl-images-amazon.com/images/I/818j6IqXq%2BL._SX425_.jpg')
+    Image: 'https://www.lamborghini.com/sites/it-en/files/DAM/it/models_gateway/blocks/special.png'
 })
 
 const astonMartin = new Car({

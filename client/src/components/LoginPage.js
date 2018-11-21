@@ -14,19 +14,17 @@ class LogInPage extends Component {
   handleChange = (event) => {
     console.log('name', event.target.name)
     console.log('value', event.target.value)
-    const updatedNewUser = {...this.state.newUser}
+    const updatedNewUser = { ...this.state.newUser }
 
     updatedNewUser[event.target.name] = event.target.value
-    this.setState({newUser: updatedNewUser})
+    this.setState({ newUser: updatedNewUser })
   }
 
-  handleSubmit = (event) => {
-    event.preventDefault()
-
+  handleSubmit = () => {
     axios.post('/api/users', this.state.newUser).then(res => {
       console.log(res.data)
       this.props.history.push(`/users/${res.data._id}`)
-        this.props.history.push(`/carpage`)
+      this.props.history.push(`/carpage`)
     })
 
   }
@@ -52,49 +50,13 @@ class LogInPage extends Component {
     return (
       <div>
         <h1>Register To See Your Competition</h1>
-        <form onSubmit={this.handleUpdate}>
-                <div>
-                  <label htmlFor="Model">Model: </label>
-                  <input
-                    type="text"
-                    onChange={this.handleChange}
-                    value={this.state.car.Model}
-                    name="Model"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="Make">Make: </label>
-                  <input
-                    onChange={this.handleChange}
-                    value={this.state.car.Make}
-                    type="text"
-                    name="name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="Type">Type: </label>
-                  <input
-                    type="text"
-                    name="email"
-                    value={this.state.car.Type}
-                    onChange={this.handleChange}
-                  />
-                </div>
-                <div>
-                  <label htmlFor="Color">Color: </label>
-                  <input
-                    onChange={this.handleChange}
-                    value={this.state.car.Color}
-                    type="text"
-                    name="info"
-                  />
-                </div>
-                <button type="submit">Save Car</button>
-              </form>
         {this.state.users.map((user) => (
           <div key={user._id}>
             <Link to={`/carpage`}>{user.username}</Link>
-            <button onClick={() => this.delete(user._id)}>Xd</button>
+            <button onClick={() => this.delete(user._id)}>X</button>
+            <form onSubmit={this.handleSubmit()}>
+
+            </form>
           </div>
         ))}
 
@@ -102,14 +64,14 @@ class LogInPage extends Component {
         <form onSubmit={this.handleSubmit}>
           <div>
             <label htmlFor="username">User Name: </label>
-            <input onChange={this.handleChange} value={this.state.newUser.username} type="text" name="username" />
+            <input onChange={(event) => this.handleChange(event)} value={this.state.newUser.username} type="text" name="username" />
           </div>
           <div>
             <label htmlFor="password">Password: </label>
-            <input onChange={this.handleChange} value={this.state.newUser.password} type="password" name="password" />
+            <input onChange={(event) => this.handleChange(event)} value={this.state.newUser.password} type="password" name="password" />
           </div>
           <button type="submit">Create Racer</button>
-          <button type="delete">Delete Racer</button>
+
         </form>
       </div>
     );
