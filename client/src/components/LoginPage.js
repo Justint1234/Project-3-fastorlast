@@ -6,8 +6,8 @@ class LogInPage extends Component {
   state = {
     users: [],
     newUser: {
-      username: '',
-      password: ''
+      Name: '',
+      Experience: ''
     }
   }
 
@@ -15,16 +15,20 @@ class LogInPage extends Component {
     console.log('name', event.target.name)
     console.log('value', event.target.value)
     const updatedNewUser = { ...this.state.newUser }
-
     updatedNewUser[event.target.name] = event.target.value
+    console.log(updatedNewUser)
     this.setState({ newUser: updatedNewUser })
   }
 
-  handleSubmit = () => {
-    axios.post('/api/users', this.state.newUser).then(res => {
-      console.log(res.data)
-      this.props.history.push(`/users/${res.data._id}`)
-      this.props.history.push(`/carpage`)
+  handleSubmit = (event) => {
+    event.preventDefault()
+    const newUser = this.state.newUser
+    console.log(newUser)
+    axios.post('/api/driver', newUser).then(res => {
+      console.log('hello')
+      console.log(res)
+      this.props.history.push(`/drivers/${res.data._id}`)
+      // this.props.history.push(`/carpage`)
     })
 
   }
@@ -50,29 +54,28 @@ class LogInPage extends Component {
     return (
       <div>
         <h1>Register To See Your Competition</h1>
-        {this.state.users.map((user) => (
+        {/* {this.state.users.map((user) => (
           <div key={user._id}>
             <Link to={`/carpage`}>{user.username}</Link>
             <button onClick={() => this.delete(user._id)}>X</button>
-            <form onSubmit={this.handleSubmit()}>
-
-            </form>
           </div>
-        ))}
+        ))} */}
 
         <h3>Sign-up</h3>
         <form onSubmit={this.handleSubmit}>
-          <div>
-            <label htmlFor="username">User Name: </label>
-            <input onChange={(event) => this.handleChange(event)} value={this.state.newUser.username} type="text" name="username" />
-          </div>
-          <div>
-            <label htmlFor="password">Password: </label>
-            <input onChange={(event) => this.handleChange(event)} value={this.state.newUser.password} type="password" name="password" />
-          </div>
-          <button type="submit">Create Racer</button>
-
+        <label htmlFor="username">User Name: </label>
+        <input onChange={this.handleChange} value={this.state.newUser.Name} type="text" name="Name"/>
+        <label htmlFor="password">Password: </label>
+        <input onChange={this.handleChange} value={this.state.newUser.Experience} type="text" name="Experience"/>
+        <label htmlFor="password">: Wins </label>
+        <input onChange={this.handleChange} value={this.state.newUser.Wins} type="text" name="Wins"/>
+        <label htmlFor="password">Losses: </label>
+        <input onChange={this.handleChange} value={this.state.newUser.Losses} type="text" name="Losses"/>
+        <label htmlFor="password">Location: </label>
+        <input onChange={this.handleChange} value={this.state.newUser.Location} type="text" name="Location"/>
+        <button type="submit">Submit</button>
         </form>
+
       </div>
     );
   }
