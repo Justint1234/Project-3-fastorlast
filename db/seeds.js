@@ -67,7 +67,7 @@ const justin = new Driver({
   Wins: 100,
   Losses: 0,
   Experience: 'Undefeated. The greatest racer on this list. His most driven car is the Koenigsegg Agera RS. This driver has been racing for 12 years',
-  Location: 'Tokyo Japan'  
+  Location: 'Tokyo, Japan'  
 })
 
 const mark = new Driver({

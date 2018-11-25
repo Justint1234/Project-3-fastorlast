@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import styled from 'styled-components'
-const DriverContainerStyle = styled.div`
+
+
+const CarContainerStyle = styled.div`
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
-`
+    flex-wrap: wrap; 
+`;
+
 
 class CarPage extends Component {
     state = {
@@ -28,7 +31,7 @@ class CarPage extends Component {
         return (
             <div>
                 <h1>Choose The Car</h1>
-                <DriverContainerStyle>
+                <CarContainerStyle>
                     {this.state.car.map((car) => (
                         <div>
                             <div>Make: {car.Make}</div>
@@ -37,10 +40,10 @@ class CarPage extends Component {
                             <div>Type: {car.Type}</div>
                             <div>Color: {car.Color}</div>
                             <div>Horsepower: {car.Horsepower}</div>
-                            <img src={car.Image} alt="sdfg" />
+                            <img src={car.Image} alt="img" />
                         </div>
                     ))}
-                </DriverContainerStyle>
+                </CarContainerStyle>
             </div>
         );
     }
