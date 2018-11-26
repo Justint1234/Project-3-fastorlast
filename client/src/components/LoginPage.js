@@ -54,13 +54,14 @@ handleChange = (event) => {
   }
 
 componentDidMount(){
+    console.log("MOUNTING")
     this.getAllUsers()
 }
 
 onChange = (e) => {
-    this.setState({
-        [e.target.name]: e.target.checked
-    });
+    // this.setState({
+    //     [e.target.name]: e.target.checked
+    // });
     this.setState({
         [e.target.name]: e.target.value
     })
@@ -82,7 +83,7 @@ onChange = (e) => {
                         </div>
                     ))}
                     
-                <form onSubmit={this.onSubmit}>
+                <form onSubmit={this.handleSubmit}>
                     Username<input type='text' placeholder='username' onChange={e => this.onChange(e)} value={this.state.username} name='username'></input>
                     Password<input type='text' placeholder='password' onChange={e => this.onChange(e)} value={this.state.password} name='password'></input>
                     <input type='submit'></input>

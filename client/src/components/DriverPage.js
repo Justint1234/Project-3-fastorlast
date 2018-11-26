@@ -12,7 +12,7 @@ class DriverPage extends Component {
     }
     getAllDrivers = () => {
         const driverId = this.props.match.params.driverId
-        axios.get(`/api/driver/`).then(res => {
+        axios.get(`/api/driver`).then(res => {
             console.log(res)
             this.setState({
                 driver: res.data

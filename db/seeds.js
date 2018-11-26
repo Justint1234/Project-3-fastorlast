@@ -9,7 +9,7 @@ const bugatti = new Car({
     Year: 2014,
     Model: 'Hennesy Venom GT',
     Make: 'Bugatti',
-    image: ('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrK8RibrHrCLgk21QnJLssYNoM_pwWKYSD2q-RoUSuMSBoLE2L')
+    image: ('https://www.thesupercarblog.com/wp-content/uploads/2017/01/Hennessey-Venom-GT-Final-Edition-1-768x432.jpg')
 })
 
 const lamborghini = new Car({

@@ -20,7 +20,7 @@ class CarPage extends Component {
 
     getAllCars = () => {
         const carId = this.props.match.params.carId
-        axios.get(`/api/car/`).then(res => {
+        axios.get(`/api/car`).then(res => {
             console.log(res)
             this.setState({
                 car: res.data
